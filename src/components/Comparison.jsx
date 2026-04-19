@@ -1,6 +1,6 @@
 
 import React from 'react';
-import '../styles/Comparison.css';
+import '../Styles/Comparison.css';
 
 const Comparison = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Team.css';
+import '../Styles/Team.css';
 
 const Team = () => {
   const teamMembers = [

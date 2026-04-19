@@ -1,35 +1,12 @@
 :root {
-  /* ألوانكِ المفضلة مع لمسة سينمائية */
-  --bg: #050505;           /* خلفية سوداء عميقة بدلاً من الأبيض */
-  --text: #9ca3af;
-  --text-h: #ffffff;
-  --accent: #aa3bff;       /* البنفسجي الذي في كودك */
-  --accent-bg: rgba(170, 59, 255, 0.1);
-  --border: #1f2028;
-  
-  --sans: 'Segoe UI', Roboto, sans-serif;
-  font: 18px/145% var(--sans);
-  background: var(--bg);
-  color: var(--text);
-  scroll-behavior: smooth;
+  --primary: #a855f7; /* البنفسجي المفضل لكِ */
+  --bg: #050505;      /* الأسود السينمائي */
+  --text: #ffffff;
 }
 
 body {
   margin: 0;
-}
-
-#root {
-  /* جعل العرض كاملاً ليتناسب مع قسم الـ Hero والـ Gallery */
-  width: 100%; 
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-/* تنسيق العناوين بشكل فخم */
-h1, h2 {
-  font-weight: 700;
-  color: var(--text-h);
-  letter-spacing: -1px;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

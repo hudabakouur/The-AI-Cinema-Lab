@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Gallery.css';
+import '../Styles/Gallery.css';
 
 const Gallery = () => {
   // هذه مصفوفة مؤقتة - زملاؤك سيضعون الصور الحقيقية لاحقاً في مجلد public/assets
