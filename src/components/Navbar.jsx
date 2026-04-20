@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import '../Styles/Navbar.css';
+// تأكدي من تسمية الشعار المحدث lab-logo-v2.webp ووضعه في assets
+import logoImg from '../assets/logo.webp'; 
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
-  // تأثير لتغيير خلفية النافبار عند التمرير لأسفل
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -17,8 +18,8 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo">
-          <span className="logo-icon">🎬</span>
-          <span className="logo-text">AI Cinema Lab</span>
+        
+          <img src={logoImg} alt="AI Cinema Lab" className="navbar-logo-img" />
         </div>
         
         <ul className="nav-links">

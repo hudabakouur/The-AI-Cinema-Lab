@@ -1,5 +1,8 @@
 .gallery {
-    padding: 100px 5%;
+    padding: 100px;
+    background-image: url(../assets/7.webp);
+    background-size: cover;
+    background-position: center;
 }
 
 .section-title {

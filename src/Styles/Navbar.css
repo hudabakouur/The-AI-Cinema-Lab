@@ -1,86 +1,74 @@
-
-/* Navbar.css */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 20px 5%;
-    transition: all 0.4s ease;
-    background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  z-index: 1000;
+  transition: all 0.4s ease;
+  background: transparent;
 }
 
-/* التنسيق الزجاجي عند التمرير */
+/* التنسيق عند التمرير (Glassmorphism) */
 .navbar.scrolled {
-    padding: 12px 5%;
-    background: rgba(5, 5, 5, 0.8);
-    backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(170, 59, 255, 0.2);
+  padding: 10px 0;
+  background: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2);
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
 }
 
-.nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-weight: 800;
-    font-size: 1.4rem;
-    color: #fff;
-    cursor: pointer;
+.navbar-logo-img {
+  height: 70px; 
+  width: auto;
+  filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.3));
+  transition: transform 0.3s ease;
+  mix-blend-mode: screen;
+
 }
 
-.logo-text {
-    background: linear-gradient(to right, #fff, var(--accent));
-
-    -webkit-text-fill-color: transparent;
+.navbar-logo-img:hover {
+  transform: scale(1.05);
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
+  display: flex;
+  list-style: none;
+  gap: 30px;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: 0.3s;
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: 500;
+  transition: 0.3s;
+  font-size: 0.95rem;
 }
 
 .nav-links a:hover {
-    color: var(--accent);
+  color: #a855f7; /* اللون البنفسجي عند الحوم */
 }
 
 .contact-btn {
-    background: var(--accent);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 4px 15px rgba(170, 59, 255, 0.3);
-    transition: 0.3s;
+  padding: 10px 25px;
+  background: transparent;
+  color: white;
+  border: 1px solid #a855f7;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
 }
 
 .contact-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(170, 59, 255, 0.5);
-}
-
-/* تحسين للجوال */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* يمكننا لاحقاً إضافة Menu للجوال */
-    }
+  background: #a855f7;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.5);
 }
