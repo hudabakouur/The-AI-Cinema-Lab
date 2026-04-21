@@ -1,29 +1,97 @@
-import React from 'react';
-import '../Styles/Gallery.css';
+import React, { useState, useEffect } from 'react';
 
+/**
+ * مكون المعرض السينمائي (Gallery Slider)
+ * تم دمج التنسيقات داخل الملف لحل مشكلة الـ Path Resolution
+ * يعرض 10 صور بنظام الـ Coverflow التفاعلي
+ */
 const Gallery = () => {
-  // هذه مصفوفة مؤقتة - زملاؤك سيضعون الصور الحقيقية لاحقاً في مجلد public/assets
-  const images = [
-    { id: 1, title: "دمشق 2100", tool: "Midjourney", path: "https://via.placeholder.com/600x400/1a1a1a/ffffff?text=AI+Damascus" },
-    { id: 2, title: "العلا في الشتاء", tool: "DALL-E 3", path: "https://via.placeholder.com/600x400/1a1a1a/ffffff?text=AI+AlUla" },
-    { id: 3, title: "بورتريه مستقبلي", tool: "Leonardo AI", path: "https://via.placeholder.com/600x400/1a1a1a/ffffff?text=AI+Portrait" },
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isAutoPlay, setIsAutoPlay] = useState(true);
+
+  // مصفوفة تحتوي على 10 صور من الـ assets
+  const mediaItems = [
+    { id: 0, title: "دمشق 2100", url: "/assets/1.webp", desc: "رؤية مستقبلية لمدينة دمشق بنظام السايبربانك." },
+    { id: 1, title: "أصالة العلا", url: "/assets/2.webp", desc: "محاكاة الطبيعة الصخرية في العلا باستخدام الذكاء الاصطناعي." },
+    { id: 2, title: "العنوان", url: "/assets/3.webp", desc: " العبارة" },
+    { id: 3, title: "العنوان", url: "/assets/4.webp", desc: "العبارة " },
+    { id: 4, title: "العنوان ", url: "/assets/5.webp", desc: " العبارة" },
+    { id: 5, title: "  العنوان", url: "/assets/6.webp", desc: " العبارة" },
+    { id: 6, title: " العنوان", url: "/assets/7.webp", desc: " العبارة" },
+    { id: 7, title: "العنوان ", url: "/assets/8.webp", desc: " العبارة" },
+    { id: 8, title: "العنوان ", url: "/assets/9.webp", desc: " العبارة" },
+    { id: 9, title: " العنوان", url: "/assets/10.webp", desc: "العبارة" }
   ];
 
+  useEffect(() => {
+    let interval;
+    if (isAutoPlay) {
+      interval = setInterval(() => {
+        setActiveIndex((prev) => (prev + 1) % mediaItems.length);
+      }, 4000);
+    }
+    return () => clearInterval(interval);
+  }, [isAutoPlay, mediaItems.length]);
+
+  const handleManualChange = (index) => {
+    setIsAutoPlay(false);
+    setActiveIndex(index);
+  };
+
   return (
-    <section className="gallery" id="gallery">
-      <div className="container">
-        <h2 className="section-title">المعرض التوليدي</h2>
-        <div className="gallery-grid">
-          {images.map(img => (
-            <div key={img.id} className="gallery-card">
-              <img src={img.path} alt={img.title} />
-              <div className="gallery-info">
-                <h3>{img.title}</h3>
-                <span className="badge">{img.tool}</span>
+    <section className="gallery-section" id="gallery">
+   
+      <style>{`
+        .gallery-section {
+         
+      `}</style>
+
+      <div className="gallery-header">
+        <h2 className="gallery-title">معرض الرؤى السينمائية</h2>
+        <p className="gallery-subtitle">استكشف {mediaItems.length} عوالم تم توليدها بالكامل عبر مختبرنا</p>
+      </div>
+
+      <div className="slider-wrapper">
+        <button className="slide-nav-btn prev" onClick={() => handleManualChange((activeIndex - 1 + mediaItems.length) % mediaItems.length)}>
+          <span>&#10094;</span>
+        </button>
+
+        <div className="cards-container">
+          {mediaItems.map((item, index) => {
+            let position = "card-hidden";
+            if (index === activeIndex) position = "card-active";
+            else if (index === (activeIndex - 1 + mediaItems.length) % mediaItems.length) position = "card-prev";
+            else if (index === (activeIndex + 1) % mediaItems.length) position = "card-next";
+
+            return (
+              <div 
+                key={item.id}
+                className={`gallery-card-item ${position}`}
+                onClick={() => handleManualChange(index)}
+              >
+                <img src={item.url} alt={item.title} className="card-img" />
+                <div className="card-info-box">
+                  <h3>{item.title}</h3>
+                  <p>{item.desc}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
+
+        <button className="slide-nav-btn next" onClick={() => handleManualChange((activeIndex + 1) % mediaItems.length)}>
+          <span>&#10095;</span>
+        </button>
+      </div>
+
+      <div className="pagination-dots">
+        {mediaItems.map((_, index) => (
+          <span 
+            key={index} 
+            className={`dot-item ${index === activeIndex ? 'active-dot' : ''}`}
+            onClick={() => handleManualChange(index)}
+          ></span>
+        ))}
       </div>
     </section>
   );

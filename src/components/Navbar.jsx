@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../Styles/Navbar.css';
-// تأكدي من تسمية الشعار المحدث lab-logo-v2.webp ووضعه في assets
 import logoImg from '../assets/logo.webp'; 
 
 const Navbar = () => {

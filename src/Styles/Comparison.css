@@ -1,82 +1,128 @@
 /* Comparison.css */
 
+/* السكشن بالكامل */
 .comparison-section {
-    padding: 80px 5%;
-    background-color: #0d0d0d;
-}
-
-.comparison-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    margin-top: 50px;
-}
-
-.comparison-card {
-    background: #1a1a1a;
-    border-radius: 20px;
-    padding: 20px;
-    border: 1px solid #333;
-    transition: border-color 0.3s ease;
-}
-
-.comparison-card:hover {
-    border-color: var(--primary);
-}
-
-.image-pair {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.image-container {
-    position: relative;
-    border-radius: 12px;
+    padding: 120px 0; /* زيادة المساحة العلوية والسفلية ليعطي فخامة */
+    background-color: #050505;
+    color: white;
     overflow: hidden;
-    aspect-ratio: 4 / 3;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.image-container img {
+.comparison-container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* تنسيق العنوان الرئيسي */
+.comparison-header h2 {
+    font-size: 3.5rem; /* حجم كبير وواضح */
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    background: linear-gradient(to right, #ffffff, #a855f7, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: shine 5s linear infinite;
+}
+
+/* تنسيق الفقرة الوصفية */
+.comparison-header p {
+    font-size: 1.2rem;
+    color: #9ca3af; /* لون رمادي هادئ */
+    max-width: 600px;
+    margin: 0 auto 60px;
+    line-height: 1.8;
+}
+
+/* حاوية السلايدر التفاعلي */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; 
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    border-radius: 40px; /* زوايا دائرية أكثر حداثة */
+    overflow: hidden;
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    box-shadow: 0 0 60px rgba(168, 85, 247, 0.15); /* توهج بنفسجي خفيف حول الإطار */
+    touch-action: none;
+}
+
+.image-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    will-change: width;
+}
+
+.image-layer img {
+    width: 1000px; 
+    height: 100%;
+    max-width: none;
     object-fit: cover;
+    display: block;
 }
 
-.label {
+.before-layer {
+    z-index: 2;
+    overflow: hidden;
+    border-right: 4px solid #a855f7;
+}
+
+.after-layer {
+    z-index: 1;
+}
+
+/* المقبض والخط الفاصل */
+.handle-bar {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 3;
+    pointer-events: none;
+}
+
+.handle-control {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65px;
+    height: 65px;
+    background: #a855f7;
+    border: 4px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    padding: 5px 12px;
-    border-radius: 5px;
-    font-size: 0.7rem;
-    backdrop-filter: blur(4px);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.8);
+    cursor: grab;
+    transition: 0.2s;
 }
 
-.label.ai {
-    background: var(--primary);
+.handle-control:active {
+    cursor: grabbing;
+    transform: translate(-50%, -50%) scale(0.9);
 }
 
-.comparison-info {
-    margin-top: 20px;
-    padding: 0 10px;
+@keyframes shine {
+    to { background-position: 200% center; }
 }
 
-.comparison-info h3 {
-    color: var(--primary);
-    margin-bottom: 10px;
-}
-
-.comparison-info p {
-    color: #bbb;
-    font-size: 0.9rem;
-}
-
-/* للتجاوب مع الجوال */
+/* للموبايل */
 @media (max-width: 768px) {
-    .image-pair {
-        grid-template-columns: 1fr;
-    }
+    .comparison-header h2 { font-size: 2.5rem; }
+    .slider-container { border-radius: 20px; }
 }

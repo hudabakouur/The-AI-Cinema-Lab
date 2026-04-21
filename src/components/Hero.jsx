@@ -6,7 +6,7 @@ import video from '../assets/video.mp4';
 const Hero = () => {
   return (
     <section className="hero" id="home">
-      {/* عنصر الفيديو الخلفي */}
+
       <div className="hero-video-wrapper">
         <video 
           autoPlay 
@@ -18,7 +18,7 @@ const Hero = () => {
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        {/* طبقة تظليل سينمائية لبروز النصوص */}
+      
         <div className="hero-overlay"></div>
       </div>
 
