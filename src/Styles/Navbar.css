@@ -9,7 +9,7 @@
   background: transparent;
 }
 
-/* التنسيق عند التمرير (Glassmorphism) */
+
 .navbar.scrolled {
   padding: 10px 0;
   background: rgba(5, 5, 5, 0.8);
@@ -54,7 +54,7 @@
 }
 
 .nav-links a:hover {
-  color: #a855f7; /* اللون البنفسجي عند الحوم */
+  color: #a855f7;
 }
 
 .contact-btn {

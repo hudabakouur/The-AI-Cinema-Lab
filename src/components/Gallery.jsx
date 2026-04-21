@@ -1,21 +1,17 @@
 import React, { useState, useEffect } from 'react';
+import '../Styles/Gallery.css';
 
-/**
- * مكون المعرض السينمائي (Gallery Slider)
- * تم دمج التنسيقات داخل الملف لحل مشكلة الـ Path Resolution
- * يعرض 10 صور بنظام الـ Coverflow التفاعلي
- */
 const Gallery = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
 
   // مصفوفة تحتوي على 10 صور من الـ assets
   const mediaItems = [
-    { id: 0, title: "دمشق 2100", url: "/assets/1.webp", desc: "رؤية مستقبلية لمدينة دمشق بنظام السايبربانك." },
-    { id: 1, title: "أصالة العلا", url: "/assets/2.webp", desc: "محاكاة الطبيعة الصخرية في العلا باستخدام الذكاء الاصطناعي." },
-    { id: 2, title: "العنوان", url: "/assets/3.webp", desc: " العبارة" },
-    { id: 3, title: "العنوان", url: "/assets/4.webp", desc: "العبارة " },
-    { id: 4, title: "العنوان ", url: "/assets/5.webp", desc: " العبارة" },
+    { id: 0, title: "دمشق 2100", url: "/assets/damac2100.webp", desc: "رؤية مستقبلية لمدينة دمشق بنظام السايبربانك." },
+    { id: 1, title: "أصالة العلا", url: "/assets/alola.webp", desc: "محاكاة الطبيعة الصخرية في العلا باستخدام الذكاء الاصطناعي." },
+    { id: 2, title: "دار الاوبرا", url: "/assets/obera.webp", desc: " دار الأوبرا وهي تستضيف فرقة موسيقية هولوغرامية تعزف مقطوعات كلاسيكية دمشقية" },
+    { id: 3, title: "اعادة اعمار سوريا", url: "/assets/newdamac.webp", desc: "محاكاة للاحياء المدمرة في سوريا بعد اعادة الاعمار " },
+    { id: 4, title: " الريف السوري ", url: "/assets/reef.webp", desc: "كيف يتخيل الذكاء الصنعي الريف السوري   " },
     { id: 5, title: "  العنوان", url: "/assets/6.webp", desc: " العبارة" },
     { id: 6, title: " العنوان", url: "/assets/7.webp", desc: " العبارة" },
     { id: 7, title: "العنوان ", url: "/assets/8.webp", desc: " العبارة" },

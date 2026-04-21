@@ -21,7 +21,7 @@
 .hero-video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* لضمان ملء الشاشة مهما كان حجمها */
+    object-fit: cover;
 }
 
 .hero-overlay {
@@ -34,7 +34,7 @@
         to bottom,
         rgba(0, 0, 0, 0.4) 0%,
         rgba(0, 0, 0, 0.7) 100%
-    ); /* تدرج لضمان وضوح النصوص */
+    );
 }
 
 .hero-content {

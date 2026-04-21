@@ -1,8 +1,6 @@
-/* Comparison.css */
 
-/* السكشن بالكامل */
 .comparison-section {
-    padding: 120px 0; /* زيادة المساحة العلوية والسفلية ليعطي فخامة */
+    padding: 120px 0; 
     background-color: #050505;
     color: white;
     overflow: hidden;
@@ -19,9 +17,9 @@
     text-align: center;
 }
 
-/* تنسيق العنوان الرئيسي */
+
 .comparison-header h2 {
-    font-size: 3.5rem; /* حجم كبير وواضح */
+    font-size: 3.5rem; 
     font-weight: 900;
     margin-bottom: 20px;
     letter-spacing: -1px;
@@ -32,26 +30,26 @@
     animation: shine 5s linear infinite;
 }
 
-/* تنسيق الفقرة الوصفية */
+
 .comparison-header p {
     font-size: 1.2rem;
-    color: #9ca3af; /* لون رمادي هادئ */
+    color: #9ca3af; 
     max-width: 600px;
     margin: 0 auto 60px;
     line-height: 1.8;
 }
 
-/* حاوية السلايدر التفاعلي */
+
 .slider-container {
     position: relative;
     width: 100%;
     max-width: 1000px; 
     aspect-ratio: 16 / 9;
     margin: 0 auto;
-    border-radius: 40px; /* زوايا دائرية أكثر حداثة */
+    border-radius: 40px; 
     overflow: hidden;
     border: 1px solid rgba(168, 85, 247, 0.3);
-    box-shadow: 0 0 60px rgba(168, 85, 247, 0.15); /* توهج بنفسجي خفيف حول الإطار */
+    box-shadow: 0 0 60px rgba(168, 85, 247, 0.15); 
     touch-action: none;
 }
 
@@ -82,7 +80,7 @@
     z-index: 1;
 }
 
-/* المقبض والخط الفاصل */
+
 .handle-bar {
     position: absolute;
     top: 0;
@@ -121,7 +119,7 @@
     to { background-position: 200% center; }
 }
 
-/* للموبايل */
+
 @media (max-width: 768px) {
     .comparison-header h2 { font-size: 2.5rem; }
     .slider-container { border-radius: 20px; }

@@ -6,6 +6,7 @@ import Lab from './components/Lab';
 import Team from './components/Team';
 import VideoSection from './components/VideoSection';
 import Comparision from './components/Comparison';
+import video from './components/video';
 function App() {
   return (
     <div className="app-container">
@@ -13,9 +14,11 @@ function App() {
       <Hero />
       <Gallery />
       <Lab />
-      <Team />
-      <VideoSection />
       <Comparision />
+      <video />
+      <VideoSection />
+      <Team />
+    
     </div>
 
   );
