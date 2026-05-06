@@ -5,11 +5,11 @@
 
 .video-wrapper {
     max-width: 900px;
-    margin: 0 auto;
+    margin: 40px auto;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 50px rgba(168, 85, 247, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.4); /* توهج أرجواني قوي */
+    border: 2px solid #a855f7;
 }
 
 .video-wrapper video {
@@ -21,4 +21,10 @@
     text-align: center;
     margin-top: 30px;
     color: #ccc;
+}
+.section-title {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }

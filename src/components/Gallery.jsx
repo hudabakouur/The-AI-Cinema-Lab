@@ -7,16 +7,16 @@ const Gallery = () => {
 
   // مصفوفة تحتوي على 10 صور من الـ assets
   const mediaItems = [
-    { id: 0, title: "دمشق 2100", url: "/assets/damac2100.webp", desc: "رؤية مستقبلية لمدينة دمشق بنظام السايبربانك." },
-    { id: 1, title: "أصالة العلا", url: "/assets/alola.webp", desc: "محاكاة الطبيعة الصخرية في العلا باستخدام الذكاء الاصطناعي." },
-    { id: 2, title: "دار الاوبرا", url: "/assets/obera.webp", desc: " دار الأوبرا وهي تستضيف فرقة موسيقية هولوغرامية تعزف مقطوعات كلاسيكية دمشقية" },
-    { id: 3, title: "اعادة اعمار سوريا", url: "/assets/newdamac.webp", desc: "محاكاة للاحياء المدمرة في سوريا بعد اعادة الاعمار " },
-    { id: 4, title: " الريف السوري ", url: "/assets/reef.webp", desc: "كيف يتخيل الذكاء الصنعي الريف السوري   " },
-    { id: 5, title: "  العنوان", url: "/assets/6.webp", desc: " العبارة" },
-    { id: 6, title: " العنوان", url: "/assets/7.webp", desc: " العبارة" },
-    { id: 7, title: "العنوان ", url: "/assets/8.webp", desc: " العبارة" },
-    { id: 8, title: "العنوان ", url: "/assets/9.webp", desc: " العبارة" },
-    { id: 9, title: " العنوان", url: "/assets/10.webp", desc: "العبارة" }
+    { id: 0, title: "دمشق 2100", url: "/assets/damac2100.webp", desc:  "  رؤية مستقبلية لمدينة دمشق  مولد بال AI." },
+    { id: 1, title: "أصالة العلا", url: "/assets/alola.webp", desc: "محاكاة الطبيعة الصخرية في العلا مولد بال AI." },
+    { id: 2, title: "دار الاوبرا", url: "/assets/obera.webp", desc: "  دار الأوبرا وهي تستضيف فرقة موسيقية هولوغرامية تعزف مقطوعات كلاسيكية دمشقية مولد بال AI" },
+    { id: 3, title: "اعادة اعمار سوريا", url: "/assets/newdamac.webp", desc: "محاكاة للاحياء المدمرة في سوريا بعد اعادة الاعمار مولد بال AI " },
+    { id: 4, title: " الريف السوري ", url: "/assets/reef.webp", desc: "كيف يتخيل الذكاء الصنعي الريف السوري مولد بال AI   " },
+    { id: 5, title: "  الفارس", url: "/assets/hours.webp", desc: "   فارسٌ وحيد يعتلي صهوة جواده على حافة الشموخ مولد بال AI " },
+    { id: 6, title: " العمران السوري", url: "/assets/8.webp", desc: "  تطور العمران السوري مولد بال AI" },
+    { id: 7, title: "محطة فضاء دمشقية ", url: "/assets/9.webp", desc: "العمارة الدمشقية العريقة وتصميمات سفن الفضاء في السبعينات مولد بال AI" },
+    { id: 8, title: "الجامعة الافتراضية السورية ", url: "/assets/svu.webp", desc: "  تخيل شكل مبنى الجامعة الافتراضية السورية مولد بال AI" },
+    { id: 9, title: "سينما الاطفال", url: "/assets/cinema.webp", desc:"  سينما الاطفال بابهى التفاصيل والالوان التي يمكن تخيلها مولد بال AI   " }
   ];
 
   useEffect(() => {

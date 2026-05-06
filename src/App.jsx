@@ -6,19 +6,22 @@ import Lab from './components/Lab';
 import Team from './components/Team';
 import VideoSection from './components/VideoSection';
 import Comparision from './components/Comparison';
-import video from './components/video';
+import Video from './components/video';
+import AIEthics from './components/AIEthics';
 function App() {
   return (
     <div className="app-container">
       <Navbar />
       <Hero />
+      <AIEthics />
       <Gallery />
       <Lab />
       <Comparision />
-      <video />
+      <Video />
       <VideoSection />
+       
       <Team />
-    
+      
     </div>
 
   );

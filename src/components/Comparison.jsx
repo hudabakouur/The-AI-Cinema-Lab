@@ -2,8 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import '../Styles/Comparison.css';
 
 // استدعاء الصور هون رح نحط صور قبل وبعد
-import imgBefore from '../assets/5.webp'; 
-import imgAfter from '../assets/6.webp'; 
+import Before from '../assets/before.webp'; 
+import After from '../assets/after.webp'; 
 
 const ComparisonSlider = () => {
   const [sliderPosition, setSliderPosition] = useState(50);
@@ -57,7 +57,7 @@ const ComparisonSlider = () => {
         >
          
           <div className="image-layer after-layer">
-            <img src={imgAfter} alt="بعد المعالجة الرقمية" />
+            <img src={After} alt="بعد المعالجة الرقمية" />
           </div>
 
         
@@ -65,7 +65,7 @@ const ComparisonSlider = () => {
             className="image-layer before-layer"
             style={{ width: `${sliderPosition}%` }}
           >
-            <img src={imgBefore} alt="اللقطة الخام الأصلية" />
+            <img src={Before} alt="اللقطة الخام الأصلية" />
           </div>
 
          
