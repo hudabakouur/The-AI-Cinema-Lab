@@ -1,5 +1,5 @@
-import React from 'react';
-import '../Styles/AIEthics.css'; 
+import React from "react";
+import "../Styles/AIEthics.css";
 
 const AIEthics = () => {
   const data = [
@@ -12,7 +12,11 @@ const AIEthics = () => {
           <path d="M10 22h4" />
         </svg>
       ),
-      items: ["تسريع عملية الإنتاج الإبداعي", "تحسين جودة الوسائط القديمة", "توفير تكاليف التصوير والمونتاج"]
+      items: [
+        "تسريع عملية الإنتاج الإبداعي",
+        "تحسين جودة الوسائط القديمة",
+        "توفير تكاليف التصوير والمونتاج",
+      ],
     },
     {
       title: "السلبيات (Cons)",
@@ -23,15 +27,19 @@ const AIEthics = () => {
           <line x1="12" y1="17" x2="12.01" y2="17" />
         </svg>
       ),
-      items: ["مخاوف التزييف العميق (Deepfakes)", "إشكالات حقوق الملكية الفكرية", "احتمالية التحيز في النتائج"]
-    }
+      items: [
+        "مخاوف التزييف العميق (Deepfakes)",
+        "إشكالات حقوق الملكية الفكرية",
+        "احتمالية التحيز في النتائج",
+      ],
+    },
   ];
 
   return (
     <section className="ethics-section" id="ethics" dir="rtl">
       <div className="ethics-container">
         <h2 className="ethics-heading">منهجية العمل والأخلاقيات</h2>
-        
+
         <div className="ethics-grid">
           {data.map((box, index) => (
             <div key={index} className="ethics-card">
@@ -71,7 +79,10 @@ const AIEthics = () => {
             مبدأ العمل التقني
           </h3>
           <p className="logic-description">
-            تعتمد الأدوات المستخدمة في هذا الموقع على نماذج الانتشار (Diffusion Models)، حيث تبدأ العملية من ضجيج رقمي عشوائي يتم تنقيته تدريجياً بناءً على الأوامر النصية (Prompts) للوصول إلى النتيجة النهائية عالية الدقة.
+            تعتمد الأدوات المستخدمة في هذا الموقع على نماذج الانتشار (Diffusion
+            Models)، حيث تبدأ العملية من ضجيج رقمي عشوائي يتم تنقيته تدريجياً
+            بناءً على الأوامر النصية (Prompts) للوصول إلى النتيجة النهائية عالية
+            الدقة.
           </p>
         </div>
       </div>

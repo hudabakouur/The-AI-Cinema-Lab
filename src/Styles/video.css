@@ -1,35 +1,42 @@
 .video-section-full {
-    padding: 100px 5%;
-    background-color: #050505;
-    width: 100%;
-    display: block !important;
-    position: relative;
+    padding: 80px 0;
+    background: linear-gradient(180deg, #0f0f0f 0%, #000000 100%);
+    color: #ffffff;
+}
+
+.container-full {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
 }
 
 .video-wrapper-full {
-    max-width: 900px;
+    width: 100%;
+    max-width: 1000px; /* يتحكم في عرض الفيديو ليكون متناسقاً */
     margin: 40px auto;
-    border-radius: 20px;
+    border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 0 40px rgba(168, 85, 247, 0.4);
-    border: 2px solid #a855f7;
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.2); /* وهج بسيط بلون الذكاء الاصطناعي */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    line-height: 0; /* يمنع الفراغات الصغيرة أسفل الفيديو */
 }
 
-.video-wrapper-full video {
+.ai-generated-video {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: contain;
 }
 
-.section-title-full {
-    text-align: center;
-    color: white;
-    font-size: 2.5rem;
+.video-description-full h3 {
+    font-size: 2rem;
+    color: #a855f7;
     margin-bottom: 20px;
 }
 
-.video-description-full {
-    text-align: center;
-    margin-top: 30px;
-    color: #ccc;
+.video-description-full p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #cccccc;
 }

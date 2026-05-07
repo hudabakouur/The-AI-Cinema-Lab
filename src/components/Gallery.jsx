@@ -5,7 +5,6 @@ const Gallery = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
 
-  // مصفوفة تحتوي على 10 صور من الـ assets
   const mediaItems = [
     {
       id: 0,
