@@ -8,7 +8,7 @@ const VideoSection = () => {
         <h2 className="section-title">العرض التعليمي للمشروع</h2>
         <div className="video-wrapper">
           <video controls poster="/assets/video-thumbnail.webp">
-            <source src="/assets/project-video.mp4" type="video/mp4" />
+            <source src="/assets/video2.mp4" type="video/mp4" />
             متصفحك لا يدعم تشغيل الفيديو.
           </video>
         </div>

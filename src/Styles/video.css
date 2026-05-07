@@ -1,8 +1,8 @@
 .video-section-full {
     padding: 100px 5%;
-    background-color: #050505; /* تأكدي من اللون هنا */
+    background-color: #050505;
     width: 100%;
-    display: block !important; /* إجبار المتصفح على إظهاره */
+    display: block !important;
     position: relative;
 }
 
@@ -11,7 +11,7 @@
     margin: 40px auto;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 0 40px rgba(168, 85, 247, 0.4); /* توهج أرجواني قوي */
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.4);
     border: 2px solid #a855f7;
 }
 

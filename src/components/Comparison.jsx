@@ -1,7 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import '../Styles/Comparison.css';
-
-// استدعاء الصور هون رح نحط صور قبل وبعد
 import Before from '../assets/before.webp'; 
 import After from '../assets/after.webp'; 
 
